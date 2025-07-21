@@ -2,11 +2,12 @@ function getFirstElement<T>(arr: T[]):T {
     return arr[0];
   }
   
-  const firstNumber =getFirstElement([1, 2, 3]);           // 1
-  const firstString= getFirstElement(["a", "b", "c"]);     // "a"
-  const firstBoolean= getFirstElement([true, false, true]); // true
+  const firstString= getFirstElement<string>(["a", "b", "c"]);     // "a"
+  const firstNumber =getFirstElement<number>([1, 2, 3]);           // 1
+  const firstBoolean= getFirstElement<boolean>([true, false, true]); // true
   
 
 console.log(firstNumber);
 console.log(firstString);
 console.log(firstBoolean);
+
